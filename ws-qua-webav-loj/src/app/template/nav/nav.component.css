@@ -1,0 +1,22 @@
+.navpri{
+  height: 8%;
+}
+
+.spaco-nav {
+  flex: 1 1 auto;
+}
+
+button{
+  margin: 0px 5px 0px 5px;
+  width: auto;
+}
+
+.busca{
+  font-size: small;
+  width: 25%;
+}
+
+img{
+  width: 100px;
+
+}

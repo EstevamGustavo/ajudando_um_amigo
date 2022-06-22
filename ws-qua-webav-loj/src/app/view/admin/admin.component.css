@@ -1,0 +1,41 @@
+mat-card{
+  margin: 5% 10% 5% 10%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+img{
+  padding: 50px 0px 50px 0px;
+  width: 100px;
+  margin: auto;
+  flex-direction: column;
+}
+
+.areacmp{
+  flex-direction: column;
+  margin: auto;
+}
+
+.cpemail{
+  width: 100%;
+}
+
+.cpsenha{
+  width: 100%;
+}
+
+.areabtn{
+  flex-direction: row;
+  margin: auto;
+}
+
+.btnentrar{
+  width: auto;
+}
+
+.btncadast{
+  width: auto;
+}
+

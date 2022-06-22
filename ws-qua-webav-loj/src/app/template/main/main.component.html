@@ -1,0 +1,17 @@
+
+<section class="menuInicial">
+  <mat-card class="prodInicial" *ngFor="let produto of produtos">
+    <img mat-card-image src="/assets/imgprod/colecaologo-marvel.png">
+    <mat-card-title> {{produto.nome}} </mat-card-title>
+    <mat-card-subtitle>Marvel</mat-card-subtitle>
+    <mat-card-content>
+      <p>
+        {{produto.desc}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button (click)="adicionarCarrinho(produto)">comprar</button>
+    </mat-card-actions>
+  </mat-card>
+
+</section>

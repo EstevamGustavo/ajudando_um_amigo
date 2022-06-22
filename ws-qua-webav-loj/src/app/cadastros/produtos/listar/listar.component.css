@@ -1,0 +1,50 @@
+.btnbck{
+  margin: 2% 10px 2% 10%;
+}
+
+.btnadd {
+  margin: 0px;
+}
+
+.btnctg{
+  margin: 2% 0 2% 52%;
+}
+
+table{
+  table-layout: fixed;
+  margin: auto;
+  width: 80%;
+}
+
+.mat-column-codigo{
+  text-align: center;
+  width: 5%;
+}
+
+.mat-column-nome{
+  width: 25%;
+}
+
+.mat-column-descricao{
+  width: 30%;
+}
+
+.mat-column-cor{
+  width: 15%;
+}
+
+.mat-column-valor{
+  width: 10%;
+  text-align: justify;
+}
+
+.mat-column-acoes{
+  width: 15%;
+  text-align: center;
+}
+
+btnacoes{
+  display: inline;
+  width: 20px;
+}
+

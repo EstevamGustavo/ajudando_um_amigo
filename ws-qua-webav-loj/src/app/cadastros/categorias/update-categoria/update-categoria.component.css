@@ -1,0 +1,45 @@
+mat-card{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 5%;
+  width: 30%;
+  height: 35%;
+}
+
+.areapri{
+  display: flex;
+  flex-direction: row;
+  justify-content: center ;
+}
+
+.cpmId{
+  margin: auto;
+  width: 20%;
+}
+
+.cmpCat{
+  margin: auto;
+  width: 70%;
+}
+
+.areaseg{
+  display: flex;
+  flex-direction: row;
+  justify-content: center ;
+}
+
+.cmpDesc{
+  margin: auto;
+  width: 95%;
+}
+
+.cmpaction{
+  display: flex;
+  justify-content: center;
+}
+
+button{
+  margin: auto;
+  width: 25%;
+}

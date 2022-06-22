@@ -1,0 +1,29 @@
+.areapri {
+  display: flex;
+  /*flex-direction: column;*/
+  align-items: flex-start;
+}
+
+.areasec{
+  display: flex;
+  justify-content: space-around;
+}
+
+.cmpnome{
+  margin: auto;
+  width: 50%;
+}
+
+.cmptel{
+  margin: auto;
+  width: 30%;
+}
+
+.cmpaction{
+  display: flex;
+  justify-content: center;
+}
+
+button{
+  width: 15%;
+}

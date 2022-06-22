@@ -1,0 +1,70 @@
+<app-nav></app-nav>
+<button class="btnbck" mat-flat-button color="warn" [routerLink]="['/menu']">
+  <mat-icon>arrow_back</mat-icon>
+</button>
+
+<button class="btnadd" mat-flat-button color="primary" (click)="openIncluirProdutos()">
+  <mat-icon>playlist_add</mat-icon>
+  <span> Adicionar Produtos</span>
+</button>
+
+<button class="btnctg" mat-flat-button color="primary" [routerLink]="['/categorias']">
+  <mat-icon> layers</mat-icon>
+  <span>Categorias</span>
+</button>
+
+
+<table mat-table [dataSource]="produtos" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="codigo">
+    <th mat-header-cell *matHeaderCellDef> codigo </th>
+    <td mat-cell *matCellDef="let produto"> {{produto.codigo}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="nome">
+    <th mat-header-cell *matHeaderCellDef> nome </th>
+    <td mat-cell *matCellDef="let produto"> {{produto.nome}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="desc">
+    <th mat-header-cell *matHeaderCellDef> descricao </th>
+    <td mat-cell *matCellDef="let produto"> {{produto.desc}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="categoria">
+    <th mat-header-cell *matHeaderCellDef> Categoria </th>
+    <td mat-cell *matCellDef="let produto"> {{produto.categoriaNome?.nome}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="cor">
+    <th mat-header-cell *matHeaderCellDef> cor </th>
+    <td mat-cell *matCellDef="let produto"> {{produto.cor}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="quantidade">
+    <th mat-header-cell *matHeaderCellDef> uni </th>
+    <td mat-cell *matCellDef="let produto"> {{produto.quantidade}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="valor">
+    <th mat-header-cell *matHeaderCellDef> valor </th>
+    <td mat-cell *matCellDef="let produto"> R$ {{produto.valor}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="acoes">
+    <th mat-header-cell *matHeaderCellDef> acoes </th>
+    <td mat-cell *matCellDef="let produto"> {{produto.acoes}}
+      <a mat-button routerLink="/produtos/editar/{{ produto.codigo }}">
+        <mat-icon>edit</mat-icon>
+      </a>
+      <a mat-button color="warn" routerLink="/produtos/excluir/{{ produto.codigo }}">
+        <mat-icon>delete_outline</mat-icon>
+      </a>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="colunas"></tr>
+  <tr mat-row *matRowDef="let row; columns: colunas;"></tr>
+</table>
+
+

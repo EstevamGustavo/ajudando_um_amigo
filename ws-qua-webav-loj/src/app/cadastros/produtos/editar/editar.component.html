@@ -1,0 +1,58 @@
+<app-nav></app-nav>
+
+<mat-card>
+  <h1>Atualizar Produtos</h1>
+  <mat-card-content class="areapri">
+    <mat-form-field class="cmpId" appearance="outline">
+      <mat-label>codigo</mat-label>
+      <input matInput disabled type="number" name="codigo" [(ngModel)]="produto.codigo">
+      <mat-icon matSuffix>list_alt</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field class="cmpNome" appearance="outline">
+      <mat-label>nome do produto</mat-label>
+      <input matInput type="text" name="nome" [(ngModel)]="produto.nome">
+      <mat-icon matSuffix>cached</mat-icon>
+    </mat-form-field>
+  </mat-card-content>
+
+  <mat-card-content class="areaseg">
+    <mat-form-field class="cmpDesc" appearance="outline">
+      <mat-label>descrição</mat-label>
+      <input matInput type="text" name="descricao" [(ngModel)]="produto.desc">
+      <mat-icon matSuffix>format_align_justify</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field class="cmpCat" appearance="outline">
+      <mat-label>categoria</mat-label>
+      <mat-select matNativeControl required name="categoria" [(ngModel)]="produto.categoriaNome.codigo">
+        <mat-option *ngFor="let categoria of categoria" [value]="categoria.codigo">{{categoria.nome}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-card-content>
+
+  <mat-card-content class="areater">
+    <mat-form-field class="cmpCor" appearance="outline">
+      <mat-label>cor</mat-label>
+      <input matInput type="text" name="cor" [(ngModel)]="produto.cor">
+      <mat-icon matSuffix>invert_colors</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field class="cmpUni" appearance="outline">
+      <mat-label>qtde</mat-label>
+      <input matInput type="text" name="qtde" [(ngModel)]="produto.quantidade">
+      <mat-icon matSuffix>plus_one</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field class="cmpVlr" appearance="outline">
+      <mat-label>valor</mat-label>
+      <input matInput type="text" name="valor" [(ngModel)]="produto.valor">
+      <mat-icon matSuffix>attach_money</mat-icon>
+    </mat-form-field>
+  </mat-card-content>
+
+  <mat-card-actions class="cmpaction">
+    <button mat-raised-button color="primary" (click)="atualizarProduto()">Atualizar</button>
+    <button mat-raised-button routerLink="/produtos">Cancelar</button>
+  </mat-card-actions>
+</mat-card>

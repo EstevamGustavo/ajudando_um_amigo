@@ -1,0 +1,31 @@
+section{
+  background-color: black;
+}
+
+table{
+  color: white;
+  margin: 30px;
+  padding: 20px;
+  text-align: justify;
+  width: 95%;
+}
+
+th{
+  padding: 10px 0px 20px 0px;
+  border-bottom: 1px solid white;
+}
+
+td{
+  padding: 5px 0px 5px 0px;
+}
+
+a{
+
+  color: white;
+  text-decoration: none;
+}
+
+img{
+  margin: 5px;
+  width: 20px;
+}

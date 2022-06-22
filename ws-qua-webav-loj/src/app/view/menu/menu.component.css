@@ -1,0 +1,15 @@
+section{
+  margin: 5% 10% 5% 10%;
+  display: flex;
+}
+
+.mat-card{
+  margin: auto;
+  width: 40%;
+  object-fit: cover;
+
+}
+
+img{
+  max-width: 100%;
+}

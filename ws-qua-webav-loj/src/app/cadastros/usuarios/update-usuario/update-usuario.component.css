@@ -1,0 +1,47 @@
+mat-card{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 20px;
+  width: 60%;
+  height: 60%;
+}
+
+.areapri{
+  display: flex;
+  justify-content: center ;
+}
+
+.cmpid{
+  margin: auto;
+  width: 20%;
+}
+
+.cmppri{
+  margin: auto;
+  width: 70%;
+}
+
+.areater{
+  display: flex;
+  justify-content: center;
+}
+
+.cmpter{
+  width: 95%;
+}
+
+.areasec{
+  display: flex;
+  justify-content: space-around;
+}
+
+.cmpaction{
+  display: flex;
+  justify-content: center;
+}
+
+button{
+  margin: auto;
+  width: 15%;
+}

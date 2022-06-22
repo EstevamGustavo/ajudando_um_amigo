@@ -1,0 +1,9 @@
+.cmpprincipal{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 95%;
+  margin: 30px;
+  border-radius: 8px;
+}

@@ -1,0 +1,41 @@
+.areapri {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cmppri{
+  margin: auto;
+  width: 95%;
+}
+
+.areasec{
+  display: flex;
+  flex-direction: row;
+
+}
+
+.cmpsec{
+  margin: auto;
+  width: 35%;
+}
+
+.cmpsecVlr{
+  margin: auto;
+  width: 25%;
+}
+
+.cmpsecUni{
+  margin: auto;
+  width: 25%;
+}
+
+
+.cmpaction{
+  display: flex;
+  justify-content: center;
+}
+
+button{
+  width: 25%;
+}

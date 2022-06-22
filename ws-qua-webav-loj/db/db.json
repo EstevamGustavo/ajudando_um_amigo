@@ -1,0 +1,76 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Camiseta Adidas",
+      "desc": "Algodão e Linho",
+      "cor": "Cinza e Branco",
+      "valor": 109.9,
+      "foto": ""
+    },
+    {
+      "id": 2,
+      "nome": "Camiseta",
+      "desc": "Nike de Algodão",
+      "cor": "Preto",
+      "valor": 39.9,
+      "foto": ""
+    },
+    {
+      "id": 3,
+      "nome": "New Balance",
+      "desc": "Calça",
+      "cor": "Azul e Branco",
+      "valor": "39,90",
+      "foto": ""
+    },
+    {
+      "id": 4,
+      "nome": "",
+      "desc": "",
+      "cor": "",
+      "valor": "",
+      "foto": ""
+    },
+    {
+      "id": 5,
+      "nome": "",
+      "desc": "",
+      "cor": "",
+      "valor": "",
+      "foto": ""
+    },
+    {
+      "id": 6,
+      "nome": "",
+      "desc": "",
+      "cor": "",
+      "valor": "",
+      "foto": ""
+    },
+    {
+      "id": 7,
+      "nome": "Camiseta Adidas",
+      "desc": "poliester",
+      "cor": "cinza",
+      "valor": "39.,90",
+      "foto": ""
+    }
+  ],
+  "pessoas": [
+    {
+      "id": 1,
+      "nome": "Ana Vitoria",
+      "fone": "(41) 988790-0098",
+      "email": "anavit@gmail.com",
+      "foto": ""
+    },
+    {
+      "id": 2,
+      "nome": "Rachel Berry",
+      "fone": "(51) 98709-0989",
+      "email": "berryr@gmail.com",
+      "foto": ""
+    }
+  ]
+}

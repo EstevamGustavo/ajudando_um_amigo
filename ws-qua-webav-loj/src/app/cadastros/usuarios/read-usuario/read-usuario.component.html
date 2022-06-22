@@ -1,0 +1,50 @@
+<app-nav></app-nav>
+
+
+<button class="btnbck" mat-flat-button color="warn" [routerLink]="['/menu']">
+  <mat-icon>arrow_back</mat-icon>
+</button>
+
+<button class="btnadd" mat-flat-button color="primary" (click)="openDialog()">
+  <mat-icon>person_add</mat-icon>
+  <span> Incluir Usuarios</span>
+</button>
+
+<table mat-table [dataSource]="usuario" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="codigo">
+    <th mat-header-cell *matHeaderCellDef> codigo </th>
+    <td mat-cell *matCellDef="let usuario"> {{usuario.codigo}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="nome">
+    <th mat-header-cell *matHeaderCellDef> nome </th>
+    <td mat-cell *matCellDef="let usuario"> {{usuario.nome}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="fone">
+    <th mat-header-cell *matHeaderCellDef> Telefone </th>
+    <td mat-cell *matCellDef="let usuario"> {{usuario.fone}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef> email </th>
+    <td mat-cell *matCellDef="let usuario"> {{usuario.email}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="acoes">
+    <th mat-header-cell *matHeaderCellDef> acoes </th>
+    <td mat-cell *matCellDef="let usuario"> {{usuario.acoes}}
+      <a mat-button routerLink="/users/editar/{{ usuario.codigo }}">
+        <mat-icon>edit</mat-icon>
+      </a>
+      <a mat-button color="warn" routerLink="/users/excluir/{{ usuario.codigo }}">
+        <mat-icon>delete_outline</mat-icon>
+      </a>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="colunas"></tr>
+  <tr mat-row *matRowDef="let row; columns: colunas;"></tr>
+
+</table>

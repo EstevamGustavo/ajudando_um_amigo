@@ -1,0 +1,70 @@
+<app-nav></app-nav>
+
+<button class="btnbck" mat-flat-button color="warn" [routerLink]="['/']">
+  <mat-icon>arrow_back</mat-icon>
+</button>
+<!--
+<mat-card>
+  <mat-card-header>
+    <mat-card-title> Pedido:</mat-card-title>
+    <mat-card-subtitle>data de criação:</mat-card-subtitle>
+  </mat-card-header>
+  <button mat-stroked-button>consultar
+    <mat-icon>arrow_forward</mat-icon>
+  </button>
+</mat-card>
+-->
+<div *ngIf="isCarrinhoVazio" class="divVazio">
+  <span>Seu carrinho está vazio!</span>
+</div>
+
+
+<table *ngIf="!(isCarrinhoVazio)" mat-table [dataSource]="itensDoCarrinho" class="mat-elevation-z1">
+
+  <tr mat-header-row *matHeaderRowDef="colunas" class="tr-header-carrinho"></tr>
+
+  <ng-container matColumnDef="codigo">
+    <th mat-header-cell *matHeaderCellDef class="primeira-coluna">Código</th>
+    <td mat-cell *matCellDef="let produto" class="primeira-coluna">{{produto.codigo}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="nome">
+    <th mat-header-cell *matHeaderCellDef>Nome</th>
+    <td mat-cell *matCellDef="let produto">{{produto.nome}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="vlrunitario">
+    <th mat-header-cell *matHeaderCellDef class="alinhaADireita valor-unitario">Valor unitário</th>
+    <td mat-cell *matCellDef="let produto" class="alinhaADireita valor-unitario">{{produto.preco}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="subtotal">
+    <th mat-header-cell *matHeaderCellDef class="alinhaADireita subtotal">Subtotal </th>
+    <td mat-cell *matCellDef="let produto" class="alinhaADireita subtotal"> {{subTotal(produto)}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="quantidade">
+    <th mat-header-cell *matHeaderCellDef class="ultima-coluna alinharNoCentro"> Quantidade </th>
+    <td mat-cell *matCellDef="let produto">
+      <app-seletor [produto]="produto" (eventoAtualizar)="atualizarItem($event)"></app-seletor>
+    </td>
+  </ng-container>
+
+  <tr mat-row *matRowDef="let row; columns: colunas;"></tr>
+
+  <ng-container matColumnDef="total">
+    <td mat-footer-cell *matFooterCellDef class="alinhaADireita"> {{ formatar(valorTotalDoPedido) }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="confirmar">
+    <td mat-footer-cell *matFooterCellDef>
+      <button mat-raised-button color="primary"> Confirmar pedido </button>
+      <!--
+      <button mat-raised-button (click)="confirmar()" color="primary"> Confirmar pedido </button>
+      -->
+    </td>
+  </ng-container>
+
+  <tr mat-footer-row *matFooterRowDef="['lbltotal', 'total', 'confirmar']" class="rodape-confimar-pedido"></tr>
+
+</table>

@@ -1,0 +1,50 @@
+<app-nav></app-nav>
+
+<button class="btnbck" mat-flat-button color="warn" [routerLink]="['/produtos']">
+  <mat-icon>arrow_back</mat-icon>
+</button>
+
+<button class="btnadd" mat-flat-button color="primary" (click)="openDialog()">
+  <mat-icon>add</mat-icon>
+</button>
+
+<!--
+<button class="btnadd" mat-flat-button color="primary" [routerLink]="['/categorias/incluir']">
+  <mat-icon>add</mat-icon>
+</button>
+-->
+<table mat-table [dataSource]="categoria" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="codigo">
+    <th mat-header-cell *matHeaderCellDef> codigo </th>
+    <td mat-cell *matCellDef="let categoria"> {{categoria.codigo}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="nome">
+    <th mat-header-cell *matHeaderCellDef> nome </th>
+    <td mat-cell *matCellDef="let categoria"> {{categoria.nome}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="desc">
+    <th mat-header-cell *matHeaderCellDef> descrição</th>
+    <td mat-cell *matCellDef="let categoria"> {{categoria.desc}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="acoes">
+    <th mat-header-cell *matHeaderCellDef> ações </th>
+    <td mat-cell *matCellDef="let categoria"> {{categoria.acoes}}
+      <a mat-button routerLink="/categorias/editar/{{ categoria.codigo }}">
+        <mat-icon>edit</mat-icon>
+      </a>
+      <a mat-button color="warn" routerLink="/categorias/excluir/{{ categoria.codigo }}">
+        <mat-icon>delete_outline</mat-icon>
+      </a>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="colunas"></tr>
+  <tr mat-row *matRowDef="let row; columns: colunas;"></tr>
+
+</table>
+
+

@@ -1,0 +1,52 @@
+.subnav{
+  background-color: black;
+  margin: 30px 0px 30px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.btnsubnav{
+  width: 10%;
+  margin: 15px 10px 15px 10px;
+}
+
+.spaco-nav {
+  flex: 1 1 auto;
+}
+
+.colescudos{
+  display: block;
+  margin: auto;
+}
+
+.escudos{
+  margin: 10px;
+  width: 150px;
+  border-radius: 50%;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.menuInicial{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 30px;
+  margin-left: 6%;
+}
+
+.prodInicial{
+  background-color: white;
+  color: black;
+  flex-direction: row;
+
+}
+
+img{
+  object-fit: contain;
+  width: 270px;
+  height: auto;
+}
+
+

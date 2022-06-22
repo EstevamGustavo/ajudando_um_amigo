@@ -1,0 +1,68 @@
+mat-card{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 5%;
+  width: 40%;
+  height: 50%;
+}
+
+.areapri{
+  display: flex;
+  flex-direction: row;
+  justify-content: center ;
+}
+
+.cmpId{
+  width: 15%;
+}
+
+.cmpNome{
+  margin: auto;
+  width: 80%;
+}
+
+.areaseg{
+  display: flex;
+  flex-direction: row;
+  justify-content: center ;
+}
+
+.cmpDesc{
+  width: 40%;
+}
+
+.cmpCat{
+  margin: auto;
+  width: 55%;
+}
+
+.areater{
+  display: flex;
+  flex-direction: row;
+  justify-content: center ;
+}
+
+.cmpCor{
+  width: 30%;
+}
+
+.cmpUni{
+  margin: auto;
+  width: 15%;
+}
+
+.cmpVlr{
+  margin: auto;
+  width: 45%;
+}
+
+.cmpaction{
+  display: flex;
+  justify-content: center;
+}
+
+button{
+  margin: auto;
+  width: 15%;
+}

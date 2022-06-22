@@ -1,0 +1,41 @@
+<app-nav></app-nav>
+
+<mat-card>
+  <h1>Deletar Usuarios</h1>
+  <mat-card-content class="areapri">
+    <mat-form-field class="cmpid" appearance="outline">
+      <mat-label>codigo</mat-label>
+      <input matInput disabled type="number" name="codigo" [(ngModel)]="usuario.codigo">
+      <mat-icon matSuffix>list_alt</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field class="cmppri" appearance="outline">
+      <mat-label>nome do produto</mat-label>
+      <input matInput disabled type="text" name="nome" [(ngModel)]="usuario.nome">
+      <mat-icon matSuffix>delete_forever</mat-icon>
+    </mat-form-field>
+  </mat-card-content>
+
+  <mat-card-content class="areater">
+    <mat-form-field class="cmpter" appearance="outline">
+      <mat-label>Telefone</mat-label>
+      <input matInput disabled type="text" name="descricao" [(ngModel)]="usuario.fone">
+      <mat-icon matSuffix>format_align_justify</mat-icon>
+    </mat-form-field>
+  </mat-card-content>
+
+  <mat-card-content class="areasec">
+    <mat-form-field appearance="outline">
+      <mat-label>email</mat-label>
+      <input matInput disabled type="text" name="cor" [(ngModel)]="usuario.email">
+      <mat-icon matSuffix>invert_colors</mat-icon>
+    </mat-form-field>
+  </mat-card-content>
+
+  <mat-card-actions class="cmpaction">
+    <button mat-raised-button color="warn" (click)="excluirUser()">Deletar</button>
+    <button mat-raised-button routerLink="/users">Cancelar</button>
+  </mat-card-actions>
+</mat-card>
+
+
