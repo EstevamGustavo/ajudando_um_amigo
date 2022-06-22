@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const URL =
-  "mongodb+srv://dev_hom_user:45223831@contabilidadehomdev.krizp.mongodb.net/test";
+  "MongoUri";
 
 const db = mongoose.connect(URL, {
   useNewUrlParser: true,
